@@ -1,0 +1,19 @@
+name: code
+on: 
+  push: 
+    branch: [ main ]
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: run a multi-line script
+      run: | 
+        echo what is this directory?
+        ls -a
+        echo
+        echo what is the workspace location
+        echo $RUNNER_WORKSPACE
+        echo
+        echo what enviroment variable are availble?
+        env
